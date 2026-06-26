@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>dev. — portfolio</title>
+  <link href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+
+<body>
+ 
+<!-- Background decorations -->
+<div class="bg-deco"></div>
+<span class="star" style="top:12%;right:18%">✦</span>
+<span class="star" style="top:28%;right:8%;animation-delay:1s">✧</span>
+<span class="star" style="top:55%;right:22%;animation-delay:.5s">✦</span>
+<span class="star" style="top:72%;right:12%;animation-delay:1.5s">✧</span>
+<span class="star" style="top:85%;right:30%;animation-delay:.8s">✦</span>
+<span class="cloud" style="top:16%;right:30%">☁</span>
+<span class="cloud" style="top:42%;right:6%">☁</span>
+ 
+<!-- Top bar -->
+<div class="topbar">
+  <span class="topbar-item" title="Toggle theme">🌙</span>
+  <span class="topbar-item" title="Settings">⚙️</span>
+</div>
+ 
+<!-- Sidebar -->
+<nav class="sidebar">
+  <a class="sidebar-icon active" href="#home">
+    <span class="sidebar-dot"></span>
+    <div class="icon-img">🏠</div>
+    <span>home</span>
+  </a>
+  <a class="sidebar-icon" href="#about">
+    <span class="sidebar-dot"></span>
+    <div class="icon-img">🐻</div>
+    <span>about me</span>
+  </a>
+  <a class="sidebar-icon" href="#projects">
+    <span class="sidebar-dot"></span>
+    <div class="icon-img">📁</div>
+    <span>my projects</span>
+  </a>
+  <a class="sidebar-icon" href="#contact">
+    <span class="sidebar-dot"></span>
+    <div class="icon-img">✉️</div>
+    <span>contact me</span>
+  </a>
+</nav>
+ 
+<!-- Main -->
+<main class="main">
+ 
+  <!-- HOME -->
+  <section id="home">
+    <div class="window">
+      <div class="window-bar">
+        <div class="traffic t-red"></div>
+        <div class="traffic t-yellow"></div>
+        <div class="traffic t-green"></div>
+        <span class="window-title">home.</span>
+      </div>
+      <div class="window-body" style="position:relative">
+        <div class="home-bg"></div>
+        <p class="home-greeting">hi, i'm <span class="name">dev</span> 👋</p>
+        <p class="home-sub">full-stack developer &amp; creative coder</p>
+        <div class="home-btns">
+          <a href="#" class="btn btn-outline">Download CV</a>
+          <a href="#about" class="btn btn-fill">About Me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="window">
+      <div class="window-bar">
+        <div class="traffic t-red"></div>
+        <div class="traffic t-yellow"></div>
+        <div class="traffic t-green"></div>
+        <span class="window-title">about me.</span>
+      </div>
+      <div class="window-body">
+        <div class="about-grid">
+          <div class="about-avatar">🧑‍💻</div>
+          <div class="about-text">
+            <h2>I'm <span class="accent">Dev</span>.</h2>
+            <p>
+              A full-stack developer who loves building things that live on the internet.
+              I'm passionate about clean code, thoughtful UX, and bringing creative ideas to life
+              through technology. When I'm not coding, I'm probably drawing, playing games, or
+              exploring new tools.
+            </p>
+            <p>Currently open to freelance and full-time opportunities ✨</p>
+            <div class="skill-chips">
+              <span class="chip">React</span>
+              <span class="chip">Node.js</span>
+              <span class="chip">TypeScript</span>
+              <span class="chip">Python</span>
+              <span class="chip">CSS / Tailwind</span>
+              <span class="chip">PostgreSQL</span>
+              <span class="chip">Figma</span>
+              <span class="chip">Git</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="window">
+      <div class="window-bar">
+        <div class="traffic t-red"></div>
+        <div class="traffic t-yellow"></div>
+        <div class="traffic t-green"></div>
+        <span class="window-title">my projects.</span>
+      </div>
+      <div class="window-body">
+        <p class="section-heading">things I've <span class="accent">built.</span></p>
+        <div class="projects-grid">
+ 
+          <div class="project-card">
+            <div class="project-icon">🌿</div>
+            <div class="project-name">GreenTrack</div>
+            <div class="project-desc">A sustainability tracker that helps users monitor their daily carbon footprint with beautiful data visualizations.</div>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">Chart.js</span>
+            </div>
+            <a href="#" class="project-link">View project →</a>
+          </div>
+ 
+          <div class="project-card">
+            <div class="project-icon">🎵</div>
+            <div class="project-name">MoodBeats</div>
+            <div class="project-desc">An AI-powered app that generates curated playlists based on your mood and activity using Spotify's API.</div>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Spotify API</span>
+              <span class="tag">ML</span>
+            </div>
+            <a href="#" class="project-link">View project →</a>
+          </div>
+ 
+          <div class="project-card">
+            <div class="project-icon">📝</div>
+            <div class="project-name">NoteNest</div>
+            <div class="project-desc">A minimalist note-taking app with real-time collaboration, markdown support, and smart tagging.</div>
+            <div class="project-tags">
+              <span class="tag">Next.js</span>
+              <span class="tag">Supabase</span>
+              <span class="tag">TypeScript</span>
+            </div>
+            <a href="#" class="project-link">View project →</a>
+          </div>
+ 
+          <div class="project-card">
+            <div class="project-icon">🛒</div>
+            <div class="project-name">ShopSage</div>
+            <div class="project-desc">A price comparison extension that tracks product prices across major retailers and alerts you to deals.</div>
+            <div class="project-tags">
+              <span class="tag">Vanilla JS</span>
+              <span class="tag">Chrome API</span>
+              <span class="tag">PostgreSQL</span>
+            </div>
+            <a href="#" class="project-link">View project →</a>
+          </div>
+ 
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="window">
+      <div class="window-bar">
+        <div class="traffic t-red"></div>
+        <div class="traffic t-yellow"></div>
+        <div class="traffic t-green"></div>
+        <span class="window-title">contact me.</span>
+      </div>
+      <div class="window-body">
+        <p class="section-heading">let's <span class="accent">connect.</span></p>
+        <p class="contact-intro">
+          Have a project in mind, a question, or just want to say hi? My inbox is always open.
+          I'll get back to you as soon as I can! 🌸
+        </p>
+        <div class="contact-links">
+          <a href="mailto:dev@example.com" class="contact-row">
+            <span class="c-icon">📧</span>
+            <div>
+              <div class="c-label">Email</div>
+              <div class="c-val">dev@example.com</div>
+            </div>
+          </a>
+          <a href="https://github.com" target="_blank" class="contact-row">
+            <span class="c-icon">🐙</span>
+            <div>
+              <div class="c-label">GitHub</div>
+              <div class="c-val">github.com/dev</div>
+            </div>
+          </a>
+          <a href="https://linkedin.com" target="_blank" class="contact-row">
+            <span class="c-icon">💼</span>
+            <div>
+              <div class="c-label">LinkedIn</div>
+              <div class="c-val">linkedin.com/in/dev</div>
+            </div>
+          </a>
+          <a href="https://twitter.com" target="_blank" class="contact-row">
+            <span class="c-icon">🐦</span>
+            <div>
+              <div class="c-label">Twitter / X</div>
+              <div class="c-val">@devcodes</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <div class="footer">made with 💚 &amp; lots of coffee — dev. © 2026</div>
+ 
+</main>
+</body>
