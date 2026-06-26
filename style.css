@@ -615,6 +615,14 @@ body {
     flex-shrink: 0;
 }
 
+.project-links {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
 /* pastel shimmer strip on left edge of each card */
 .project-card::before {
     content: '';
@@ -717,6 +725,19 @@ body {
 .project-link:hover {
     letter-spacing: .03em;
     text-decoration: underline;
+}
+
+.project-link-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--mid);
+    transition: color .15s, transform .15s;
+}
+
+.project-link-icon:hover {
+    color: var(--terracotta);
+    transform: scale(1.1);
 }
 
 /* ─── CONTACT ─── */
@@ -943,6 +964,11 @@ body.dark .theme-toggle:hover {
 
     .project-link {
         margin-top: 4px;
+    }
+
+    .project-links {
+        margin-top: 4px;
+        align-items: flex-start;
     }
 
     .home-greeting {
