@@ -1,3 +1,19 @@
+// ─── Dark mode toggle ───
+const themeBtn = document.getElementById('themeToggle');
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+// Restore saved preference or fall back to system preference
+if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && prefersDark)) {
+  document.body.classList.add('dark');
+  themeBtn.textContent = '☀️';
+}
+
+themeBtn.addEventListener('click', () => {
+  const isDark = document.body.classList.toggle('dark');
+  themeBtn.textContent = isDark ? '☀️' : '🌙';
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
+});
+
 // ─── Active sidebar on scroll ───
 const sections = document.querySelectorAll('section[id]');
 const icons = document.querySelectorAll('.sidebar-icon');
