@@ -509,7 +509,7 @@ body {
     display: none;
 }
 
-.experience-item + .experience-item {
+.experience-item+.experience-item {
     margin-top: 0;
 }
 
@@ -689,9 +689,7 @@ body {
 }
 
 .project-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
+    display: none;
 }
 
 .tag {
@@ -942,6 +940,7 @@ body.dark .theme-toggle:hover {
 
 /* Large desktop (1400px+): give more breathing room */
 @media (min-width: 1400px) {
+
     .main section,
     .main .footer {
         max-width: 860px;
@@ -950,6 +949,7 @@ body.dark .theme-toggle:hover {
 
 /* Standard desktop (1024–1400px): already well-handled by base styles */
 @media (min-width: 1024px) and (max-width: 1400px) {
+
     .main section,
     .main .footer {
         max-width: 720px;
@@ -1101,13 +1101,22 @@ body.dark .theme-toggle:hover {
     }
 
     .experience-item {
-        flex-direction: column;
-        gap: 2px;
-        padding: 10px 0;
+        flex-direction: row;
+        align-items: baseline;
+        gap: 0.6rem;
+        padding: 8px 0;
+    }
+
+    .exp-role {
+        font-size: .78rem;
+        flex: 1;
+        min-width: 0;
     }
 
     .exp-dates {
-        font-size: .6rem;
+        font-size: .58rem;
+        white-space: nowrap;
+        flex-shrink: 0;
     }
 
     /* Projects */
@@ -1129,11 +1138,12 @@ body.dark .theme-toggle:hover {
     }
 
     .project-name {
-        font-size: .88rem;
+        font-size: .82rem;
     }
 
     .project-desc {
-        font-size: .75rem;
+        font-size: .7rem;
+        line-height: 1.4;
     }
 
     .project-link {
