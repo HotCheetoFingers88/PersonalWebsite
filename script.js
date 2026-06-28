@@ -2,8 +2,8 @@
 const themeBtn = document.getElementById('themeToggle');
 const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-// Restore saved preference or fall back to system preference
-if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && prefersDark)) {
+// Only go dark if the user explicitly toggled it — ignore system preference
+if (localStorage.getItem('theme') === 'dark') {
   document.body.classList.add('dark');
   themeBtn.textContent = '☀️';
 }
@@ -18,15 +18,21 @@ themeBtn.addEventListener('click', () => {
 const sections = document.querySelectorAll('section[id]');
 const icons = document.querySelectorAll('.sidebar-icon');
 
+function setActive(id) {
+  icons.forEach(i => i.classList.remove('active'));
+  const target = document.querySelector(`.sidebar-icon[href="#${id}"]`);
+  if (target) target.classList.add('active');
+}
+
+// Use rootMargin to trigger when section top crosses the upper third of the viewport
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => {
-    if (e.isIntersecting) {
-      icons.forEach(i => i.classList.remove('active'));
-      const target = document.querySelector(`.sidebar-icon[href="#${e.target.id}"]`);
-      if (target) target.classList.add('active');
-    }
+    if (e.isIntersecting) setActive(e.target.id);
   });
-}, { threshold: 0.4 });
+}, {
+  rootMargin: '-10% 0px -60% 0px',
+  threshold: 0
+});
 
 sections.forEach(s => observer.observe(s));
 
@@ -36,6 +42,9 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     const target = document.querySelector(a.getAttribute('href'));
     if (target) {
       e.preventDefault();
+      // Immediately highlight the clicked sidebar icon
+      const id = a.getAttribute('href').slice(1);
+      setActive(id);
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   });
