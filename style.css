@@ -196,9 +196,10 @@ body {
 /* ─── Main content ─── */
 .main {
     flex: 1;
-    width: 100%;
+    width: calc(100% - 130px);
     padding: 32px 24px 80px;
     margin-left: 130px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -980,8 +981,9 @@ body.dark .theme-toggle:hover {
 
     .main {
         padding: 24px 16px 60px;
-        gap: 24px;
+        width: calc(100% - 90px);
         margin-left: 90px;
+        gap: 24px;
     }
 
     .window-body {
@@ -1051,8 +1053,9 @@ body.dark .theme-toggle:hover {
     /* Main shifts up, not right, with bottom padding for nav bar */
     .main {
         padding: 16px 12px 90px;
-        gap: 16px;
+        width: 100%;
         margin-left: 0;
+        gap: 16px;
     }
 
     .main section,
